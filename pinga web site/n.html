@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thank You!</title>
+<style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Poppins', sans-serif; }
+    body { 
+        background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                url('image/new.png.webp');
+        display: flex; justify-content: center; align-items: center; height: 100vh; color: #fff; 
+        text-align: center;
+    }
+    .thankyou-container {
+        background: rgba(255,255,255,0.1); padding: 40px 30px; border-radius: 20px; 
+        backdrop-filter: blur(10px); box-shadow: 0 15px 30px rgba(0,0,0,0.2); animation: fadeIn 1s ease;
+    }
+    .thankyou-container h1 { font-size: 36px; margin-bottom: 20px; color: #fff; }
+    .thankyou-container p { font-size: 18px; margin-bottom: 30px; }
+    .thankyou-container a {
+        display: inline-block; padding: 12px 25px; background: #7497f1; color: #070d17; 
+        border-radius: 10px; text-decoration: none; font-weight: bold; transition: 0.3s;
+    }
+    .thankyou-container a:hover { background: #112d63; color: #fff; transform: scale(1.05); }
+    @keyframes fadeIn{ 0%{ opacity:0; transform:translateY(-20px); } 100%{ opacity:1; transform:translateY(0); } }
+</style>
+</head>
+<body>
+    <div class="thankyou-container">
+        <h1>Thank You!</h1>
+        <p>Your order has been received. We will contact you soon.</p>
+        <a href="index.html.html">Back to Home Page</a>
+    </div>
+</body>
+</html>

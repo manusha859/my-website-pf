@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Pinga Fashion</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            color: rgb(242, 240, 244);
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                url('image/new.png.webp');
+            line-height: 1.5;
+        }
+
+          nav {
+            background: rgba(0,0,0,0.5);
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: yellow;
+        }
+
+        h1, h2 {
+            margin-bottom: 10px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Subscription Form */
+        .subscribe {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .subscribe input[type="email"] {
+            padding: 10px;
+            width: 300px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .subscribe button {
+            padding: 10px 20px;
+            margin-left: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .subscribe button:hover {
+            background-color: rgb(153, 153, 138);
+            color: #7c6262;
+        }
+
+        /* Footer Layout */
+        .footer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            border-top: 1px solid rgba(255,255,255,0.3);
+            padding-top: 30px;
+        }
+
+        .footer-column {
+            flex: 1 1 200px;
+            margin: 10px;
+            
+            
+        }
+
+        .footer-column h3 {
+            text-decoration: underline;
+            
+        }
+
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-column ul li {
+            margin: 8px 0;
+        }
+
+        .footer-column ul li a {
+            color: #9ccfdd;
+            text-decoration: none;
+        }
+
+        .footer-column ul li a:hover {
+            text-decoration: underline;
+            
+        }
+
+        /* Social links */
+        .social {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 10px 0;
+        }
+
+        .social a {
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            background-color: rgba(172, 167, 167, 0.1);
+            border-radius: 5px;
+            text-align: center;
+            line-height: 35px;
+            color: #6c68e7;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Payment icons & extra */
+        .payments {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .payments img {
+            height: 25px;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 12px;
+            color: rgba(255,255,255,0.6);
+        }
+
+        /* About form */
+        .about-form {
+             background: rgba(10, 10, 10, 0.6);
+            color: rgb(227, 215, 215);
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 30px;
+            border-radius: 10px;
+             
+        }
+
+        .about-form input, 
+        .about-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .about-form button {
+            background: rgb(238, 222, 73);
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .about-form button:hover {
+            background: #dbe64a;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <nav>
+      <a href="index.html.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="custom.html">Design</a>
+        <a href="bulk.html">Bulk</a>
+        <a href="contact.html">Contact</a>
+        <a href="size.html">Size Chart</a>
+        <a href="about.html">About</a>
+        <a href="login.html">Login</a>
+</nav>
+
+
+    <div class="container">
+        <!-- Subscription Section -->
+        <div class="subscribe">
+            <h2>SIGN UP FOR PINGA OFFERS</h2>
+            <p>Be the first to know about events & exclusive offers.</p>
+            <form action="https://formsubmit.co/manushadananjaya859@gmail.com" method="POST">
+                <input type="email" name="email" placeholder="Enter your email" required>
+                  
+
+                <input type="hidden" name="_next" value="http://127.0.0.1:5500/n.html">
+                <input type="hidden" name="_captcha" value="false">
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+
+        <!-- About Form -->
+        <div class="about-form">
+            <h2>About Us / Contact Form</h2>
+            <form action="https://formsubmit.co/manushadananjaya859@gmail.com" method="POST">
+                <label>Your Name</label>
+                <input type="text" name="name" placeholder="Enter your name" required>
+                
+                <label>Email</label>
+                <input type="email" name="email" placeholder="Enter your email" required>
+
+                <label>Message</label>
+                <textarea name="message" rows="5" placeholder="Write your message here..." required></textarea>
+
+                <input type="hidden" name="_next" value="http://127.0.0.1:5500/n.html">
+                <input type="hidden" name="_captcha" value="false">
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+
+        <!-- Footer Section -->
+        <div class="footer">
+            <div class="footer-column">
+                <h3>Ways To Shop</h3>
+                <ul>
+                    <li><a href="#">Gift Cards</a></li>
+                    <li><a href="#">Retail Stores</a></li>
+                    <li><a href="#">Free Catalogs</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Customer Service</h3>
+                <ul>
+                    <li><a href="#">Shipping</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Easy Returns</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Shopping Services</h3>
+                <ul>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Orders</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>About Pinga Fashion</h3>
+                <ul>
+                    <li><a href="#">Who We Are</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Freelance</a></li>
+                    <li><a href="#">Community</a></li>
+                    <li><a href="#">Affiliate Program</a></li>
+                    <li><a href="#">Creator Program</a></li>
+                    <li><a href="#">Press Releases</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Social & Payment -->
+        <div class="container" style="text-align:center;">
+            <div class="social">
+                <a href="#">F</a>
+                <a href="#">T</a>
+                <a href="#">I</a>
+                <a href="#">Y</a>
+            </div>
+
+            <div class="payments">
+                <img src="image/ama.webp" alt="Amazon">
+                <img src="image/visa.png" alt="Visa">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard">
+                <img src="image/py.png" alt="PayPal">
+            </div>
+        </div>
+
+        <div class="copyright">
+            © 2026 Pinga Fashion | All Rights Reserved
+        </div>
+    </div>
+
+</body>
+</html>
