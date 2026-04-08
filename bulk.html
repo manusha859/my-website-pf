@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Pinga Sublimation - Bulk Orders</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
 
@@ -55,20 +55,111 @@
             border-radius: 10px;
             cursor: pointer;
         }
+
+
+
+
+
+         nav {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            background: rgba(0,0,0,0.8);
+        }
+
+        .menu-icon {
+            font-size: 28px;
+            cursor: pointer;
+            margin-right: 15px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+
+
+         /* SIDE MENU */
+        .side-menu {
+            position: fixed;
+            top: 0;
+            left: -260px;
+            width: 260px;
+            height: 100%;
+            background: black;
+            padding-top: 60px;
+            transition: 0.3s;
+            z-index: 1000;
+        }
+
+        .side-menu a {
+            display: block;
+            padding: 15px;
+            color: white;
+            text-decoration: none;
+            border-bottom: 1px solid #333;
+        }
+
+        .side-menu a:hover {
+            background: #444;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 30px;
+            cursor: pointer;
+        }
+         @media (min-width: 768px) {
+            .menu-icon {
+                display: none;
+            }
+
+            .side-menu {
+                position: static;
+                width: auto;
+                height: auto;
+                display: flex;
+                background: none;
+                padding: 0;
+            }
+
+            .side-menu a {
+                border: none;
+                margin: 0 10px;
+            }
+
+            .close-btn {
+                display: none;
+            }
+
+            nav {
+                justify-content: space-between;
+            }
+        }
     </style>
 </head>
 
 <body>
 
 <nav>
-    <a href="index.html.html">Home</a>
+    <div class="menu-icon" onclick="openMenu()">☰</div>
+    <div class="logo">Pinga Fashion</div>
+
+    <div id="menu" class="side-menu">
+        <span class="close-btn" onclick="closeMenu()">×</span>
+
+        <a href="index.html.html">Home</a>
         <a href="shop.html">Shop</a>
-        <a href="custom.html">Design</a>
-        <a href="bulk.html">Bulk</a>
-        <a href="contact.html">Contact</a>
-        <a href="size.html">Size Chart</a>
-        <a href="about.html">About</a>
-        <a href="login.html">Login</a>
+<a href="custom.html">Design</a>
+<a href="bulk.html">Bulk</a>
+<a href="contact.html">Contact</a>
+<a href="size.html">Size</a>
+<a href="about.html">About</a>
+<a href="login.html">Login</a>
+    </div>
 </nav>
 
 <h1>Bulk Orders</h1>
@@ -95,6 +186,15 @@
         
     </form>
 </div>
+<script>
+function openMenu() {
+    document.getElementById("menu").style.left = "0";
+}
+
+function closeMenu() {
+    document.getElementById("menu").style.left = "-260px";
+}
+</script>
 
 </body>
 </html>
