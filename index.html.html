@@ -6,20 +6,37 @@
     <!-- MOBILE FIX -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- FONT -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+   <!-- Google Fonts: Playfire Display -->
+<link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+</head>
 
     <style>
         body {
-            margin: 0;
-            font-family: 'Poppins', sans-serif;
-            color: white;
+           /* BACKGROUND VIDEO */
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 
-            background:
-                linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-                url('image/new.png.webp');
-            background-size: cover;
-            background-position: center;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* DARK OVERLAY (IMPORTANT FOR TEXT VISIBILITY) */
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(7, 7, 7, 0.6);
+    z-index: -1;
+}
         }
 
         /* NAVBAR */
@@ -27,7 +44,8 @@
             display: flex;
             align-items: center;
             padding: 15px;
-            background: rgba(0,0,0,0.8);
+
+            background: linear-gradient(90deg, rgb(57, 56, 52), rgb(178, 169, 159));
         }
 
         .menu-icon {
@@ -37,9 +55,12 @@
         }
 
         .logo {
-            font-size: 24px;
-            font-weight: bold;
-        }
+   font-family: "Lobster Two", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+   font-size: 40px;
+   color: white;
+}
 
         /* SIDE MENU */
         .side-menu {
@@ -48,7 +69,7 @@
             left: -260px;
             width: 260px;
             height: 100%;
-            background: black;
+            background: rgb(194, 108, 108);
             padding-top: 60px;
             transition: 0.3s;
             z-index: 1000;
@@ -111,7 +132,7 @@
 
         /* SERVICES */
         .services {
-            background: #c7e9e6;
+            background:  white;
             color: black;
             padding: 40px;
             text-align: center;
@@ -119,7 +140,7 @@
 
         /* WHY */
         .why {
-            background: #c7e9e6;
+            background:  white;
             color: black;
             padding: 40px;
             text-align: center;
@@ -134,7 +155,7 @@
 
         
         .map {
-            background:  rgb(199, 233, 230);
+            background:  white;
             color: black;
             text-align: center;
             padding: 40px;
@@ -143,6 +164,13 @@
          .social {
     margin-top: 20px;
 }
+        
+          .copyright{
+
+             
+            color: white;
+            text-align: center;
+          }
 
 
 
@@ -200,11 +228,224 @@
             nav {
                 justify-content: space-between;
             }
-        }
+
+
+
+
+
+
+
+            /* PRODUCTS / CATEGORY SECTION */
+.products {
+    padding: 50px 20px;
+    background:  white;
+    color: black;
+    text-align: center;
+}
+
+.products h2 {
+    margin-bottom: 30px;
+}
+
+/* GRID SYSTEM */
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+/* PRODUCT CARD */
+.product-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+}
+
+/* IMAGE */
+.product-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+/* TEXT */
+.product-info {
+    padding: 15px;
+}
+
+.product-info h3 {
+    margin: 10px 0;
+}
+
+.product-info button {
+    background:  white;
+    
+    padding: 10px 20px;
+    
+    margin-top: 20px;
+    
+    color: black;
+    padding: 12px 25px;
+    border-radius: 0px;
+    
+    font-size: 15px;
+    cursor: pointer;
+
+   
+     cursor: pointer;
+}
+  
+}
+
+.product-info button:hover {
+    background: rgb(155, 153, 149);
+}
+
+
+
+/* ABOUT US SECTION */
+.about-us {
+     background: linear-gradient(90deg, white, rgb(255, 255, 255)); /* Semi-transparent background for readability */
+    color: #222;
+    padding: 50px 20px;
+    max-width: 1000px;
+    margin: 50px auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.about-us h2 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #d47c22; /* matches your gold/orange theme */
+}
+
+.about-us h3 {
+    font-size: 24px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.about-us p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.about-us ul {
+    margin-left: 20px;
+    list-style-type: disc;
+}
+
+.about-us ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+
+
+
+/* COMPANY INFO SECTION */
+.company-info {
+    background:  white; /* semi-transparent over video */
+    color: #222;
+    padding: 40px 25px;
+    max-width: 900px;
+    margin: 40px auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.company-info h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #750a0a; /* match your theme */
+}
+
+.company-info .tagline {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    color: #555;
+    font-style: italic;
+}
+
+.company-info p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+.company-info .address {
+    font-weight: bold;
+    color: #000;
+}
+        
+
+
+
+
+
+
+        /* VIDEO SECTION */
+.video-section {
+    text-align: center;
+    padding: 25px 10px;
+    background : white
+}
+
+.video-section h2 {
+    margin-bottom: 20px;
+}
+
+/* VIDEO STYLE */
+.my-video {
+    width: 90%;
+    max-width: 500px;
+    border-radius: 100px;
+    box-shadow: 0 10px 30px rgba(252, 253, 253, 0.5);
+}
+
+/* MOBILE FIX */
+@media (max-width: 768px) {
+    .my-video {
+        width: 100%;
+    }
+
+
+
+    /* HERO VIDEO */
+.hero-video {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    /* SHARP LOOK */
+    filter: contrast(105%) brightness(100%);
+}
+}
     </style>
 </head>
 
 <body>
+
+    <!-- BACKGROUND VIDEO -->
+<video autoplay muted loop playsinline id="bg-video">
+    <source src="image/cloth.mp4" type="video/mp4">
+</video>
 
 <!-- NAVBAR -->
 <nav>
@@ -238,7 +479,8 @@
 
     <br>
     <img src="image/logo.png.jpeg">
-</div>
+
+
 
 <!-- SERVICES -->
 <div class="services">
@@ -267,11 +509,11 @@
 <div class="why">
     <h2>Why Choose Us</h2>
 
-  <div class="why-container">
+    <div class="why-container">
         <div class="why-box">
             <img src="image/scr.png">
             <h3>No Middlemen</h3>
-            <p>Best value and quality for your custom tshirt printing needs. Pay for what you want, not for what you get.</p>
+            <p>Best value and quality.</p>
         </div>
 
         <div class="why-box">
@@ -309,14 +551,102 @@
 <!-- SOCIAL -->
 
 
- <p>✔ No 57 Station Road, Gampola 20500</p>
 
+
+<!-- PRODUCTS / CATEGORY -->
+<div class="products">
+    <h2>Our Collection</h2>
+
+    <div class="product-container">
+
+        <div class="product-card">
+            <img src="image/main.jpeg" alt="T Shirt">
+            <div class="product-info">
+                <h3>T-Shirts</h3>
+                <p>Custom printed designs</p>
+                <button onclick="window.location.href='shop.html'">Shop Now</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="image/bott.jpg" alt="Hoodie">
+            <div class="product-info">
+                <h3>Bottom</h3>
+                <p>Comfort & style</p>
+                <button onclick="window.location.href='shop.html'">Shop Now</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="image/ssh.jpg" alt="Caps">
+            <div class="product-info">
+                <h3>Short</h3>
+                <p>Trendy designs</p>
+                <button onclick="window.location.href='shop.html'">Shop Now</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="image/Custom.webp" alt="Custom">
+            <div class="product-info">
+                <h3>Custom Design</h3>
+                <p>Create your own style</p>
+                <button onclick="window.location.href='custom.html'">Design Now</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+<!-- COMPANY INFO -->
+<div class="company-info">
+    <h2>Pinga Fashion</h2>
+    <p class="tagline">To achieve a monopoly on service in the print industry</p>
+    <p>Pinga Fashion, a multifaceted boutique digital print services company, not only provides normative and traditional print services, but also keeps on par with world trends and up-to-date technology.</p>
+    
+</div>
+<p class="address">✔ No 57 Station Road, Gampola 20500</p>
     <p>✔ <a href="tel:0705293599">0705293599</a></p>
     <p>✔ <a href="tel:0778689244">0778689244</a></p>
     <p>✔ <a href="tel:0717598962">0717598962</a></p>
     </div>
 
-    <div class="social">
+    
+
+<!-- PRINTING MACHINE VIDEO -->
+<div class="video-section">
+    <h2>Live Printing Machine</h2>
+
+    <video controls autoplay muted loop class="my-video">
+        <source src="image/clooo.mp4" type="video/mp4">
+        Your browser does not support video.
+    </video>
+
+ <!-- ABOUT US -->
+<div class="about-us">
+    <h2>About Us</h2>
+    <p>Pinga Fashion is a digital print service provider with exceptional client servicing and professional speed of delivery capacities. Using high end, state of the art equipment and machinery we cater to business and personal print needs of every market.</p>
+
+    <p>At Anim8 we guarantee cutting edge print quality with our keen interest in constant updating of latest equipment to software systems that guarantee smooth work flow and efficient billing systems.</p>
+
+    <p>As a successful young company, we are confident that our ability to be resilient and adapt in the face of fast paced evolution this day and age demands in record time to be the foundation of the industry benchmarks that we keep setting.</p>
+
+    <h3>Our Mission:</h3>
+    <ul>
+        <li>To delight the client with the possibilities of print media.</li>
+        <li>To provide the client with the highest quality prints to best meet the clients’ requirement.</li>
+        <li>To ensure the fastest speed of delivery.</li>
+    </ul>
+
+    <h3>Our Vision:</h3>
+    <p>To achieve a monopoly on service in the print industry.</p>
+</div>
+</div>
+
+<div class="social">
     <a href="https://www.facebook.com/profile.php?id=61583099477416" target="_blank">
         <img src="image/face.jpg" alt="Facebook">
     </a>
@@ -332,6 +662,8 @@
         <img src="image/ins.jpeg" alt="instergram">
     </a>
 </div>
+
+
     
 <div class="copyright">
             © 2026 Pinga Fashion | All Rights Reserved
@@ -339,6 +671,11 @@
 
 </div>
 
+
+
+
+
+ 
 
 <!-- JS -->
 <script>
