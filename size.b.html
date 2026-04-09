@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Pinga Sublimation - Size Chart</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
 
@@ -62,6 +62,41 @@
             padding: 10px;
             border: 3px solid black;
         }
+
+
+
+        /* SIDE MENU */
+        .side-menu {
+            position: fixed;
+            top: 0;
+            left: -260px;
+            width: 260px;
+            height: 100%;
+            background: black;
+            padding-top: 60px;
+            transition: 0.3s;
+            z-index: 1000;
+        }
+
+        .side-menu a {
+            display: block;
+            padding: 15px;
+            color: white;
+            text-decoration: none;
+            border-bottom: 1px solid #333;
+        }
+
+        .side-menu a:hover {
+            background: #444;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 30px;
+            cursor: pointer;
+        }
     </style>
 </head>
 
@@ -69,10 +104,18 @@
 
 <!-- Navbar -->
 <nav>
-    <a href="index.html.html">Home</a>
-    <a href="size.t.html">T-Shirt Sizes</a>
-    <a href="size.h.html">Short Sizes</a>
-    <a href="size.b.html">Bottom Sizes</a>
+    <div class="menu-icon" onclick="openMenu()">☰</div>
+    <div class="logo">Pinga Fashion</div>
+
+    <div id="menu" class="side-menu">
+        <span class="close-btn" onclick="closeMenu()">×</span>
+
+        <a href="index.html.html">Home</a>
+        <a href="size.b.html">Bottom</a>
+<a href="size.h.html">Short</a>
+<a href="size.t.html">t shirt</a>
+
+    </div>
 </nav>
 
 
@@ -153,6 +196,18 @@
     <p>Garment Measurement Charts For online Retailers</p>
     
 </div>
+
+<script>
+function openMenu() {
+    document.getElementById("menu").style.left = "0";
+}
+
+function closeMenu() {
+    document.getElementById("menu").style.left = "-260px";
+}
+</script>
+
+
 
 </body>
 </html>
