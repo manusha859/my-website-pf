@@ -254,8 +254,7 @@
         }
 
 
-
-         /* SIDE MENU */
+   /* SIDE MENU */
         .side-menu {
             position: fixed;
             top: 0;
@@ -316,6 +315,49 @@
         }
 
 
+        /* ABOUT US SECTION */
+.about-us {
+     background: linear-gradient(90deg, rgb(111, 108, 108), rgb(228, 219, 219)); /* Semi-transparent background for readability */
+    color: #222;
+    padding: 50px 20px;
+    max-width: 1000px;
+    margin: 50px auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.about-us h2 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #d47c22; /* matches your gold/orange theme */
+}
+
+.about-us h3 {
+    font-size: 24px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.about-us p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.about-us ul {
+    margin-left: 20px;
+    list-style-type: disc;
+}
+
+.about-us ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+
+
   
 
 
@@ -324,7 +366,7 @@
 
 <body>
 
-  <!-- NAVBAR -->
+<!-- NAVBAR -->
 <nav>
     <div class="menu-icon" onclick="openMenu()">☰</div>
     <div class="logo">Pinga Fashion</div>
@@ -430,6 +472,30 @@
         <div class="date">3 weeks ago</div>
     </div>
 
+
+
+    <!-- ABOUT US -->
+<div class="about-us">
+    <h2>About Us</h2>
+    <p>Pinga Fashion is a digital print service provider with exceptional client servicing and professional speed of delivery capacities. Using high end, state of the art equipment and machinery we cater to business and personal print needs of every market.</p>
+
+    <p>At Anim8 we guarantee cutting edge print quality with our keen interest in constant updating of latest equipment to software systems that guarantee smooth work flow and efficient billing systems.</p>
+
+    <p>As a successful young company, we are confident that our ability to be resilient and adapt in the face of fast paced evolution this day and age demands in record time to be the foundation of the industry benchmarks that we keep setting.</p>
+
+    <h3>Our Mission:</h3>
+    <ul>
+        <li>To delight the client with the possibilities of print media.</li>
+        <li>To provide the client with the highest quality prints to best meet the clients’ requirement.</li>
+        <li>To ensure the fastest speed of delivery.</li>
+    </ul>
+
+    <h3>Our Vision:</h3>
+    <p>To achieve a monopoly on service in the print industry.</p>
+</div>
+</div>
+
+
   
 
 
@@ -499,6 +565,8 @@ div class="footer">
             © 2026 Pinga Fashion | All Rights Reserved
         </div>
     </div>
+
+    
     <script>
 function openMenu() {
     document.getElementById("menu").style.left = "0";
