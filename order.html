@@ -2,8 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--favicon-->
+    <link rel="icon" type="image/png" href="image/lolo.png"> 
+    
     <title>Order Page</title>
 
     <style>
@@ -85,6 +88,22 @@
                 padding: 30px 20px;
             }
         }
+
+
+
+        @keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
     </style>
 </head>
 
@@ -117,7 +136,7 @@
         <textarea name="details" placeholder="Custom design details"></textarea>
 
         <!-- Redirect after submit -->
-        <input type="hidden" name="_next" value="n.html">
+        <input type="hidden" name="_next" value="http://127.0.0.1:5500/n.html">
 
         <!-- Disable captcha -->
         <input type="hidden" name="_captcha" value="false">
