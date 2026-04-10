@@ -13,56 +13,65 @@
 
     <style>
         body {
-           /* BACKGROUND VIDEO */
+/* BACKGROUND VIDEO */
 #bg-video {
     position: fixed;
     top: 0;
     left: 0;
+
     width: 100%;
-    height: 100%;
+    height: 160%;
 
     object-fit: cover;
-    z-index: -1;
+
+    z-index: -2;
+
+    /* MAKE VIDEO CLEAR */
+    filter: contrast(110%) brightness(100%) saturate(110%);
 }
 
-/* DARK OVERLAY (IMPORTANT FOR TEXT VISIBILITY) */
+/* DARK OVERLAY */
 body::after {
     content: "";
     position: fixed;
     top: 0;
     left: 0;
+
     width: 100%;
     height: 100%;
 
-    background: rgba(7, 7, 7, 0.6);
+    background: rgba(0, 0, 0, 0.5);
     z-index: -1;
+    
 }
         }
-
-        /* NAVBAR */
         nav {
-            display: flex;
-            align-items: center;
-            padding: 15px;
-            border-radius: 50px;
-            
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
 
-            background: linear-gradient(90deg, rgb(57, 56, 52), rgb(178, 169, 159));
-        }
+    background: rgba(255, 255, 255, 0.1);
+     box-shadow: 0 10px 20px rgba(29, 26, 23, 0.5);
+    
 
+    border-radius: 50px;
+    margin: 10px;
+}
+
+.logo {
+    font-family: "Lobster Two", sans-serif;
+    font-size: 35px;
+    color: #fff;
+    letter-spacing: 2px;
+}
         .menu-icon {
             font-size: 28px;
             cursor: pointer;
             margin-right: 15px;
         }
 
-        .logo {
-   font-family: "Lobster Two", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-   font-size: 40px;
-   color: white;
-}
+        
 
         /* SIDE MENU */
         .side-menu {
@@ -98,37 +107,39 @@ body::after {
             color: white;
         }
 
-        /* HERO */
-        .hero {
-            text-align: center;
-            padding: 80px 20px;
-              color: rgb(250, 249, 249);
-        }
+     .hero {
+    text-align: center;
+    padding: 120px 20px;
+    color: white;
+    animation: fadeIn 2s ease;
+}
 
-        .hero h1 {
-            font-size: 40px;
-              color: rgb(157, 231, 230);
+.hero h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
 
-        }
-
-        .hero p {
-            font-size: 18px;
-        }
+.hero p {
+    font-size: 20px;
+    opacity: 0.9;
+}
 
         .btn {
-            margin-top: 20px;
-            background: rgb(11, 11, 11);
-            color: rgb(255, 249, 249);
-            padding: 12px 25px;
-            border-radius: 30px;
-            border: none;
-            font-size: 18px;
-            cursor: pointer;
-        }
+    margin-top: 20px;
+    background: linear-gradient(45deg, #7e746b, #0a0a0a);
+    color: white;
+    padding: 14px 30px;
+    border-radius: 50px;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
 
-        .btn:hover {
-            background: rgb(75, 73, 70);
-        }
+.btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(239, 238, 237, 0.5);
+}
 
         .hero img {
             width: 140px;
@@ -186,6 +197,16 @@ body::after {
             padding: 20px;
             border-radius: 10px;
             transition: 0.3s;
+            @keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
         }
 
         .why-box:hover {
@@ -249,6 +270,7 @@ body::after {
     background:  white;
     color: black;
     text-align: center;
+    
 }
 
 .products h2 {
@@ -264,15 +286,15 @@ body::after {
 
 /* PRODUCT CARD */
 .product-card {
-    background: white;
-    border-radius: 15px;
+    background: #fff;
+    border-radius: 20px;
     overflow: hidden;
-    transition: 0.3s;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.4s;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
 .product-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-12px) scale(1.02);
 }
 
 /* IMAGE */
@@ -326,6 +348,7 @@ body::after {
     margin: 50px auto;
     border-radius: 20px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    
 }
 
 .about-us h2 {
@@ -445,6 +468,17 @@ body::after {
     filter: contrast(105%) brightness(100%);
 }
 }
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
     </style>
 </head>
 
@@ -452,7 +486,7 @@ body::after {
 
     <!-- BACKGROUND VIDEO -->
 <video autoplay muted loop playsinline id="bg-video">
-    <source src="image/cloth.mp4" type="video/mp4">
+    <source src="image/shooo.mp4" type="video/mp4">
 </video>
 
 <!-- NAVBAR -->
