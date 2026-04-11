@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--favicon-->
+    <link rel="icon" type="image/png" href="image/lolo.png"> 
+    
+    <title>Order Page</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(30, 28, 28, 0.5)),
+                url('image/back2.avif');
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+
+        .order-form-container {
+            background: rgba(10, 10, 10, 0.6);
+            padding: 40px 30px;
+            border-radius: 5px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            width: 100%;
+            max-width: 350px;
+        }
+
+        .order-form-container h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #f4f6f6;
+        }
+
+        form input,
+        form select,
+        form textarea {
+            width: 100%;
+            padding: 13px 15px;
+            margin: 8px 0 20px 0;
+            border: 1px solid #0f0f0f;
+            border-radius: 13px;
+            transition: 0.3s;
+            font-size: 13px;
+        }
+
+        form input:focus,
+        form select:focus,
+        form textarea:focus {
+            border-color: #090a0a;
+            outline: none;
+            box-shadow: 0 0 5px rgba(14, 14, 15, 0.5);
+        }
+
+        form textarea {
+            resize: none;
+            min-height: 100px;
+        }
+
+        button {
+            width: 95%;
+            padding: 12px;
+            background-color: #1e1e1f;
+            color: #fff;
+            border: none;
+            border-radius: 100px;
+            font-size: 15px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #010710;
+        }
+
+        @media (max-width: 600px) {
+            .order-form-container {
+                padding: 30px 20px;
+            }
+        }
+
+
+
+        @keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+    </style>
+</head>
+
+<body>
+
+<div class="order-form-container">
+    <h2>Place Your Order</h2>
+
+    <form action="https://formsubmit.co/manushadananjaya859@gmail.com" method="POST">
+
+        <input type="text" name="name" placeholder="Your Name" required>
+
+        <input type="email" name="email" placeholder="Your Email" required>
+
+        <!-- NEW Contact Number -->
+        <input type="tel" name="phone" placeholder="Contact Number" required>
+
+        <!-- NEW Category Dropdown -->
+        <select name="category" required>
+             <option value="">default</option>
+            <option value="">Cup/Mug</option>
+            <option value="">Photo Frames</option>
+            
+            
+        </select>
+
+        
+
+        <input type="number" name="quantity" placeholder="Quantity">
+
+        <textarea name="details" placeholder="Custom design details"></textarea>
+
+        <!-- Redirect after submit -->
+        <input type="hidden" name="_next" value="http://127.0.0.1:5500/n.html">
+
+        <!-- Disable captcha -->
+        <input type="hidden" name="_captcha" value="false">
+
+        <button type="submit">Submit Order</button>
+
+    </form>
+</div>
+
+</body>
+</html>
