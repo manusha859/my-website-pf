@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pinga Sublimation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+
+    <!--favicon-->
+    <link rel="icon" type="image/png" href="image/lolo.png">
+    
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+             background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                url('image/new.png.webp');
+            color: rgb(246, 242, 242);
+            text-align: center;
+        }
+
+        nav {
+            background: #111;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+       nav a:hover {
+            color: yellow;
+        }
+
+        .container {
+            text-align: center;
+            padding: 60px;
+        }
+
+        .btn {
+    display: block;       /* change from inline-block to block */
+    margin: 40px auto;    /* center + space between buttons */
+    padding: 12px 25px;
+    background: rgb(189, 189, 187);
+    color: black;
+    text-decoration: none;
+    border-radius: 100px;
+    width: 250px;         /* optional: same button width */
+    text-align: center;
+}
+        
+
+        .btn:hover {
+            background: rgb(63, 62, 60);
+        }
+
+
+
+
+
+         nav {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            background: rgba(0,0,0,0.8);
+        }
+
+        .menu-icon {
+            font-size: 28px;
+            cursor: pointer;
+            margin-right: 15px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+
+
+         /* SIDE MENU */
+        .side-menu {
+            position: fixed;
+            top: 0;
+            left: -260px;
+            width: 260px;
+            height: 100%;
+            background: black;
+            padding-top: 60px;
+            transition: 0.3s;
+            z-index: 1000;
+        }
+
+        .side-menu a {
+            display: block;
+            padding: 15px;
+            color: white;
+            text-decoration: none;
+            border-bottom: 1px solid #333;
+        }
+
+        .side-menu a:hover {
+            background: #444;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 30px;
+            cursor: pointer;
+        }
+         @media (min-width: 768px) {
+            .menu-icon {
+                display: none;
+            }
+
+            .side-menu {
+                position: static;
+                width: auto;
+                height: auto;
+                display: flex;
+                background: none;
+                padding: 0;
+            }
+
+            .side-menu a {
+                border: none;
+                margin: 0 10px;
+            }
+
+            .close-btn {
+                display: none;
+            }
+
+            nav {
+                justify-content: space-between;
+            }
+        }
+
+
+        @keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+    </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <div class="menu-icon" onclick="openMenu()">☰</div>
+    <div class="logo">Pinga Fashion</div>
+
+    <div id="menu" class="side-menu">
+        <span class="close-btn" onclick="closeMenu()">×</span>
+
+         <a href="index.html.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="custom.html">Design</a>
+        <a href="bulk.html">Bulk</a>
+        <a href="contact.html">Contact</a>
+        <a href="size.html">Size Chart</a>
+        <a href="about.html">About</a>
+        <a href="login.html">Login</a>
+        <a href="mug.html">Mug/Cup Printing & Photo Frames</a>
+
+    </div>
+</nav>
+
+<div class="container">
+    <h1>Welcome to Pinga Sublimation 👕</h1>
+
+    <p>Select your size chart below</p>
+
+    <a class="btn" href="size.t.html">T-Shirt Size Chart</a>
+    <a class="btn" href="size.h.html">Short Size Chart</a>
+    <a class="btn" href="size.b.html">Bottom Size Chart</a>
+</div>
+
+<script>
+function openMenu() {
+    document.getElementById("menu").style.left = "0";
+}
+
+function closeMenu() {
+    document.getElementById("menu").style.left = "-260px";
+}
+</script>
+
+</body>
+</html>

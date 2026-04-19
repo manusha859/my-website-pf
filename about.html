@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About Pinga Sublimation</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+
+    <!--favicon-->
+    <link rel="icon" type="image/png" href="image/lolo.png">
+
+    <style>
+
+        
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                url('image/new.png.webp');
+            color: white;
+            text-align: center;
+        }
+
+       
+        nav {
+            background: rgba(0,0,0,0.5);
+            padding: 15px;
+        }
+
+        nav a {
+            color: white;
+            margin: 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: yellow;
+        }
+
+        .content {
+            padding: 40px;
+        }
+        .hero img {
+            width: 300px;
+            border-radius: 100px;
+            margin-top: 20px;
+        }
+
+        .review {
+    background: #faf7f7;
+    padding: 15px;
+    margin: 15px 0;
+    border-left: 5px solid orange;
+    border-radius: 5px;
+}
+
+.review p {
+    font-style: italic;
+    color: #c23131;
+}
+
+.review h4 {
+    margin-top: 10px;
+    color: #1e3c72;
+}
+
+
+        .reviews-container {
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .review-card {
+            background: rgb(113, 148, 160);
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            box-shadow: 0 1px 5px rgba(15, 14, 14, 0.1);
+        }
+
+        .review-header {
+            display: flex;
+            align-items: center;
+        }
+
+        .avatar {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: #b8b5b5;
+            margin-right: 15px;
+        }
+
+        .name {
+            font-weight: 500;
+        }
+
+        .stars {
+            color: #fbbc04;
+            font-size: 14px;
+        }
+
+        .review-text {
+            margin-top: 10px;
+            color: #2e2c2c;
+        }
+
+        .date {
+            font-size: 12px;
+            color: rgb(20, 20, 20);
+            margin-top: 5px;
+        }
+
+        .social img {
+    width: 40px;
+    margin: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.social img:hover {
+    transform: scale(1.2);
+}
+
+.footer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            border-top: 1px solid rgba(255,255,255,0.3);
+            padding-top: 30px;
+        }
+
+        .footer-column {
+            flex: 1 1 200px;
+            margin: 10px;
+            
+            
+        }
+
+        .footer-column h3 {
+            text-decoration: underline;
+            
+        }
+
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-column ul li {
+            margin: 8px 0;
+        }
+
+        .footer-column ul li a {
+            color: #9ccfdd;
+            text-decoration: none;
+        }
+
+        .footer-column ul li a:hover {
+            text-decoration: underline;
+            
+        }
+
+        /* Social links */
+        .social {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 10px 0;
+        }
+
+        .social a {
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            background-color: rgba(172, 167, 167, 0.1);
+            border-radius: 5px;
+            text-align: center;
+            line-height: 35px;
+            color: #6c68e7;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Payment icons & extra */
+        .payments {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .payments img {
+            height: 25px;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 12px;
+            color: rgba(255,255,255,0.6);
+        }
+
+        /* About form */
+        .about-form {
+             background: rgba(10, 10, 10, 0.6);
+            color: rgb(227, 215, 215);
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 30px;
+            border-radius: 10px;
+             
+        }
+
+        .about-form input, 
+        .about-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .about-form button {
+            background: rgb(238, 222, 73);
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .about-form button:hover {
+            background: #dbe64a;
+        }
+
+
+
+
+
+         nav {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            background: rgba(0,0,0,0.8);
+        }
+
+        .menu-icon {
+            font-size: 28px;
+            cursor: pointer;
+            margin-right: 15px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+
+   /* SIDE MENU */
+        .side-menu {
+            position: fixed;
+            top: 0;
+            left: -260px;
+            width: 260px;
+            height: 100%;
+            background: black;
+            padding-top: 60px;
+            transition: 0.3s;
+            z-index: 1000;
+        }
+
+        .side-menu a {
+            display: block;
+            padding: 15px;
+            color: white;
+            text-decoration: none;
+            border-bottom: 1px solid #333;
+        }
+
+        .side-menu a:hover {
+            background: #444;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 30px;
+            cursor: pointer;
+        }
+         @media (min-width: 768px) {
+            .menu-icon {
+                display: none;
+            }
+
+            .side-menu {
+                position: static;
+                width: auto;
+                height: auto;
+                display: flex;
+                background: none;
+                padding: 0;
+            }
+
+            .side-menu a {
+                border: none;
+                margin: 0 10px;
+            }
+
+            .close-btn {
+                display: none;
+            }
+
+            nav {
+                justify-content: space-between;
+            }
+        }
+
+
+        /* ABOUT US SECTION */
+.about-us {
+     background: linear-gradient(90deg, rgb(111, 108, 108), rgb(228, 219, 219)); /* Semi-transparent background for readability */
+    color: #222;
+    padding: 50px 20px;
+    max-width: 1000px;
+    margin: 50px auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.about-us h2 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #d47c22; /* matches your gold/orange theme */
+}
+
+.about-us h3 {
+    font-size: 24px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.about-us p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.about-us ul {
+    margin-left: 20px;
+    list-style-type: disc;
+}
+
+.about-us ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+  
+
+
+    </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <div class="menu-icon" onclick="openMenu()">☰</div>
+    <div class="logo">Pinga Fashion</div>
+
+    <div id="menu" class="side-menu">
+        <span class="close-btn" onclick="closeMenu()">×</span>
+
+         <a href="index.html.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="custom.html">Design</a>
+        <a href="bulk.html">Bulk</a>
+        <a href="contact.html">Contact</a>
+        <a href="size.html">Size Chart</a>
+        <a href="about.html">About</a>
+        <a href="login.html">Login</a>
+        <a href="mug.html">Mug/Cup Printing & Photo Frames</a>
+
+    </div>
+</nav>
+
+<div class="content">
+    <h1>About Pinga Fashion</h1>
+    <p>Pinga Fashion is a modern clothing printing shop.</p>
+    <p>We provide custom designs, high-quality printing, and bulk orders for events and businesses.</p>
+</div>
+
+<div class="hero">
+
+    <br><br>
+
+    <img src="image/abou.jpeg" alt="Clothing">
+</div>
+
+<div class="box">
+    
+    
+  <div class="reviews-container">
+     <div class="social">
+    <a href="https://www.facebook.com/profile.php?id=61583099477416" target="_blank">
+        <img src="image/face.jpg" alt="Facebook">
+    </a>
+
+    <a href="https://www.tiktok.com/pinga.sublimation" target="_blank">
+        <img src="image/tik.webp" alt="TikTok">
+    </a>
+
+    <a href="https://wa.me/0707293599" target="_blank">
+        <img src="image/wh.avif" alt="WhatsApp">
+    </a>
+     <a href="https://www.instagram.com/" target="_blank">
+        <img src="image/ins.jpeg" alt="instergram">
+    </a>
+</div>
+
+    <h2>Customer Reviews ⭐</h2>
+
+    <!-- Review 1 -->
+    <div class="review-card">
+        <div class="review-header">
+            <div class="avatar"></div>
+            <div>
+                <div class="name">Kasun Perera</div>
+                <div class="stars">★★★★★</div>
+            </div>
+        </div>
+
+        <div class="review-text">
+            Excellent quality! The print is very clear and long lasting.
+        </div>
+
+        <div class="date">2 days ago</div>
+    </div>
+
+    <!-- Review 2 -->
+    <div class="review-card">
+        <div class="review-header">
+            <div class="avatar"></div>
+            <div>
+                <div class="name">Nadeesha Silva</div>
+                <div class="stars">★★★★☆</div>
+            </div>
+        </div>
+
+        <div class="review-text">
+            Fast delivery and friendly service. Highly recommended!
+        </div>
+
+        <div class="date">1 week ago</div>
+    </div>
+
+    <!-- Review 3 -->
+    <div class="review-card">
+        <div class="review-header">
+            <div class="avatar"></div>
+            <div>
+                <div class="name">Tharindu Fernando</div>
+                <div class="stars">★★★★★</div>
+            </div>
+        </div>
+
+        <div class="review-text">
+            Best place for bulk orders. Good price and great quality!
+        </div>
+
+        <div class="date">3 weeks ago</div>
+    </div>
+
+
+
+    <!-- ABOUT US -->
+<div class="about-us">
+    <h2>About Us</h2>
+    <p>Pinga Fashion is a digital print service provider with exceptional client servicing and professional speed of delivery capacities. Using high end, state of the art equipment and machinery we cater to business and personal print needs of every market.</p>
+
+    <p>At Anim8 we guarantee cutting edge print quality with our keen interest in constant updating of latest equipment to software systems that guarantee smooth work flow and efficient billing systems.</p>
+
+    <p>As a successful young company, we are confident that our ability to be resilient and adapt in the face of fast paced evolution this day and age demands in record time to be the foundation of the industry benchmarks that we keep setting.</p>
+
+    <h3>Our Mission:</h3>
+    <ul>
+        <li>To delight the client with the possibilities of print media.</li>
+        <li>To provide the client with the highest quality prints to best meet the clients’ requirement.</li>
+        <li>To ensure the fastest speed of delivery.</li>
+    </ul>
+
+    <h3>Our Vision:</h3>
+    <p>To achieve a monopoly on service in the print industry.</p>
+</div>
+</div>
+
+
+  
+
+
+</div>
+<div
+div class="footer">
+            <div class="footer-column">
+                <h3>Ways To Shop</h3>
+                <ul>
+                    <li><a href="#">Gift Cards</a></li>
+                    <li><a href="#">Retail Stores</a></li>
+                    <li><a href="#">Free Catalogs</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Customer Service</h3>
+                <ul>
+                    <li><a href="#">Shipping</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Easy Returns</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Shopping Services</h3>
+                <ul>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Orders</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>About Pinga Fashion</h3>
+                <ul>
+                    <li><a href="#">Who We Are</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Freelance</a></li>
+                    <li><a href="#">Community</a></li>
+                    <li><a href="#">Affiliate Program</a></li>
+                    <li><a href="#">Creator Program</a></li>
+                    <li><a href="#">Press Releases</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Social & Payment -->
+        <div class="container" style="text-align:center;">
+            <div class="social">
+                <a href="#">F</a>
+                <a href="#">T</a>
+                <a href="#">I</a>
+                <a href="#">Y</a>
+            </div>
+
+            <div class="payments">
+                <img src="image/ama.webp" alt="Amazon">
+                <img src="image/visa.png" alt="Visa">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard">
+                <img src="image/py.png" alt="PayPal">
+            </div>
+        </div>
+
+        <div class="copyright">
+            © 2026 Pinga Fashion | All Rights Reserved
+        </div>
+    </div>
+
+    
+    <script>
+function openMenu() {
+    document.getElementById("menu").style.left = "0";
+}
+
+function closeMenu() {
+    document.getElementById("menu").style.left = "-260px";
+}
+</script>
+
+
+
+</body>
+</html>

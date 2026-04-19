@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pinga Sublimation - Size Chart</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+
+    <!--favicon-->
+    <link rel="icon" type="image/png" href="image/lolo.png">
+
+    <style>
+         body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+             background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                url('image/new.png.webp');
+            color: rgb(252, 250, 250);
+            text-align: center;
+        }
+
+        nav {
+            background: rgba(0,0,0,0.5);
+            padding: 15px;
+        }
+
+        nav a {
+            color: white;
+            margin: 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: yellow;
+        }
+
+        h1 {
+            margin-top: 20px;
+        }
+
+        table {
+            margin: 30px auto;
+            border-collapse: collapse;
+            width: 75%;
+            background: rgb(73, 89, 93);
+            color: black;
+        }
+        th {
+            background: linear-gradient(45deg, #131616, #545657);
+            color: white;
+            padding: 15px;
+        }
+
+         tr {
+            transition: 0.3s;
+        }
+ tr:hover {
+            transform: scale(1.02);
+            background: #eeeeeb;
+        }
+
+
+        th, td {
+            padding: 10px;
+            border: 3px solid black;
+        }
+
+
+
+
+
+        /* SIDE MENU */
+        .side-menu {
+            position: fixed;
+            top: 0;
+            left: -260px;
+            width: 260px;
+            height: 100%;
+            background: black;
+            padding-top: 60px;
+            transition: 0.3s;
+            z-index: 1000;
+        }
+
+        .side-menu a {
+            display: block;
+            padding: 15px;
+            color: white;
+            text-decoration: none;
+            border-bottom: 1px solid #333;
+        }
+
+        .side-menu a:hover {
+            background: #444;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 30px;
+            cursor: pointer;
+        }
+         @media (min-width: 768px) {
+            .menu-icon {
+                display: none;
+            }
+
+            .side-menu {
+                position: static;
+                width: auto;
+                height: auto;
+                display: flex;
+                background: none;
+                padding: 0;
+            }
+
+            .side-menu a {
+                border: none;
+                margin: 0 10px;
+            }
+
+            .close-btn {
+                display: none;
+            }
+
+            nav {
+                justify-content: space-between;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav>
+    <div class="menu-icon" onclick="openMenu()">☰</div>
+    <div class="logo">Pinga Fashion</div>
+
+    <div id="menu" class="side-menu">
+        <span class="close-btn" onclick="closeMenu()">×</span>
+
+        <a href="index.html.html">Home</a>
+        <a href="size.b.html">Bottom</a>
+<a href="size.h.html">Short </a>
+<a href="size.t.html">T-Shirt </a>
+
+    </div>
+</nav>
+<h1>T-Shirt Size Chart</h1>
+
+
+
+
+
+<table>
+    <tr>
+        <th>Size</th>
+        <th>Hight</th>
+        <th>Chest</th>
+    </tr>
+
+    <tr>
+        <td>XS</td>
+        <td>27.4"</td>
+        <td>18.9"</td>
+    </tr>
+
+    <tr>
+        <td>S</td>
+        <td>29"</td>
+        <td>19.2"</td>
+    </tr>
+
+    <tr>
+        <td>M</td>
+        <td>30.0"</td>
+        <td>20.5"</td>
+    </tr>
+
+    <tr>
+        <td>L</td>
+        <td>31"</td>
+        <td>22"</td>
+    </tr>
+
+    <tr>
+        <td>XL</td>
+        <td>32"</td>
+        <td>23"</td>
+    </tr>
+
+    <tr>
+        <td>2XL</td>
+        <td>33</td>
+        <td>24.5"</td>
+    </tr>
+    <tr>
+        <td>3XL</td>
+        <td>34"</td>
+        <td>25.6"</td>
+    </tr>
+    <tr>
+        <td>4XL</td>
+        <td>34.3"</td>
+        <td>26"</td>
+    </tr>
+    <tr>
+        <td>5XL</td>
+        <td>35"</td>
+        <td>27.3"</td>
+    </tr>
+    <tr>
+        <td>6XL</td>
+        <td>36"</td>
+        <td>28.4"</td>
+    </tr>
+
+
+
+
+
+
+
+</table>
+<div class="services">
+    
+    <p>Garment Measurement Charts For online Retailers</p>
+    
+</div>
+
+<script>
+function openMenu() {
+    document.getElementById("menu").style.left = "0";
+}
+
+function closeMenu() {
+    document.getElementById("menu").style.left = "-260px";
+}
+</script>
+
+
+</body>
+</html>

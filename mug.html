@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mug Printing - Pinga Fashion</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--favicon-->
+    <link rel="icon" type="image/png" href="image/lolo.png"> 
+
+    <style>
+  body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(rgba(251, 250, 250, 0.5), rgba(242, 236, 236, 0.5)),
+                url('image/back2.avif');
+            color: rgb(11, 11, 11);
+            text-align: center;
+            
+            margin: 0;
+    overflow-x: hidden; 
+        }
+
+        /* NAV */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 30px;
+            background: white;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .logo {
+            font-size: 28px;
+            color: rgb(250, 248, 248);
+            font-weight: bold;
+        }
+
+        /* MAIN LAYOUT */
+        .container {
+    display: flex;
+    padding: 8px;
+    align-items: flex-start; /* ⭐ important fix */
+}
+
+        /* LEFT FILTER */
+        .sidebar {
+    width: 250px;
+    background: white;
+    padding: 25px;
+    margin-right: 20px;
+    border-radius: 20px;
+    box-shadow: 0 13px 20px rgba(199, 194, 189, 0.5);
+
+    position: sticky;   /* ⭐ makes it stay in place */
+    top: 20px;          /* distance from top */
+    height: fit-content;
+}
+
+        .sidebar h3 {
+            margin-bottom: 10px;
+        }
+
+        .filter-btn {
+            background: rgb(37, 35, 35);
+            color: white;
+            padding: 8px;
+            border: none;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        /* RIGHT PRODUCTS */
+        .products {
+    flex: 1;
+    min-width: 0;
+}
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 10px;
+        }
+
+        .card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .card h4 {
+            margin: 10px 0 5px;
+        }
+
+        .price {
+            color: gray;
+        }
+
+         .btn {
+            margin-top: 10px;
+            background: rgb(101, 97, 97);
+            color: white;
+            border: none;
+            width: 85%;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: black;
+        }
+
+        /* MOBILE */
+       @media(max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        position: static;   /* ⭐ disable sticky on phone */
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+
+
+        .footer {
+    background: #0f0f0f;
+     color: rgb(145, 135, 135);
+    padding: 40px 20px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    gap: 20px;
+}
+
+.footer-box h3 {
+    color: rgb(171, 222, 255);
+}
+
+.footer-box p {
+    margin: 5px 0;
+}
+
+.footer-box a {
+   color: rgb(145, 135, 135);
+    text-decoration: none;
+}
+
+.footer-box a:hover {
+    color: rgb(246, 242, 242);
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 20px;
+    color: #aaa;
+}
+
+
+
+
+  nav {
+            background: rgba(0,0,0,0.5);
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: yellow;
+        }
+
+
+
+
+
+
+        
+        nav {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            background: rgba(0,0,0,0.8);
+        }
+
+        .menu-icon {
+            font-size: 28px;
+            cursor: pointer;
+            margin-right: 15px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+
+
+         /* SIDE MENU */
+        .side-menu {
+            position: fixed;
+            top: 0;
+            left: -260px;
+            width: 260px;
+            height: 100%;
+            background: black;
+            padding-top: 60px;
+            transition: 0.3s;
+            z-index: 1000;
+        }
+
+        .side-menu a {
+            display: block;
+            padding: 15px;
+            color: white;
+            text-decoration: none;
+            border-bottom: 1px solid #333;
+        }
+
+        .side-menu a:hover {
+            background: #444;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 30px;
+            cursor: pointer;
+        }
+         @media (min-width: 768px) {
+            .menu-icon {
+                display: none;
+            }
+
+            .side-menu {
+                position: static;
+                width: auto;
+                height: auto;
+                display: flex;
+                background: none;
+                padding: 0;
+            }
+
+            .side-menu a {
+                border: none;
+                margin: 0 10px;
+            }
+
+            .close-btn {
+                display: none;
+            }
+
+            nav {
+                justify-content: space-between;
+            }
+        }
+
+
+
+
+
+
+         nav {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            background: rgba(0,0,0,0.8);
+        }
+
+        .menu-icon {
+            font-size: 28px;
+            cursor: pointer;
+            margin-right: 15px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+
+
+         /* SIDE MENU */
+        .side-menu {
+            position: fixed;
+            top: 0;
+            left: -260px;
+            width: 260px;
+            height: 100%;
+            background: black;
+            padding-top: 60px;
+            transition: 0.3s;
+            z-index: 1000;
+        }
+
+        .side-menu a {
+            display: block;
+            padding: 15px;
+            color: white;
+            text-decoration: none;
+            border-bottom: 1px solid #333;
+        }
+
+        .side-menu a:hover {
+            background: #444;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 30px;
+            cursor: pointer;
+        }
+         @media (min-width: 768px) {
+            .menu-icon {
+                display: none;
+            }
+
+            .side-menu {
+                position: static;
+                width: auto;
+                height: auto;
+                display: flex;
+                background: none;
+                padding: 0;
+            }
+
+            .side-menu a {
+                border: none;
+                margin: 0 10px;
+            }
+
+            .close-btn {
+                display: none;
+            }
+
+            nav {
+                justify-content: space-between;
+            }
+        }
+
+
+        @keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.btnna {
+    background: none;     /* remove box color */
+    border: none;         /* remove border */
+    outline: none;        /* remove outline */
+    box-shadow: none;     /* remove shadow */
+    font-size: 18px;
+    cursor: pointer;
+    color: black;         /* text color */
+    padding: 0;           /* remove spacing */
+}
+
+.btnna:hover {
+    text-decoration: underline; /* optional hover effect */
+}
+
+
+
+
+
+    </style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+    <div class="menu-icon" onclick="openMenu()">☰</div>
+    <div class="logo">Pinga Fashion</div>
+
+    <div id="menu" class="side-menu">
+        <span class="close-btn" onclick="closeMenu()">×</span>
+
+        <a href="index.html.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="custom.html">Design</a>
+        <a href="bulk.html">Bulk</a>
+        <a href="contact.html">Contact</a>
+        <a href="size.html">Size Chart</a>
+        <a href="about.html">About</a>
+        <a href="login.html">Login</a>
+        <a href="mug.html">Mug/Cup Printing & Photo Frames</a>
+
+
+    </div>
+</nav>
+
+<div class="container">
+
+    <!-- LEFT SIDE -->
+    <div class="sidebar">
+        <h3>Filter by price</h3>
+        <p>LKR 750 – LKR 2000</p>
+       <button class="btn" onclick="window.location.href='order.html'">
+    Order Now
+</button>
+        <h3>Category</h3>
+        
+        <p><button class="btnna"   onclick="window.location.href='mug.html'">
+         Mug / Cup Printing</button></p>
+         <p><button class="btnna"   onclick="window.location.href='fram.html'">
+          Photo Frames</button></p>
+         <p><button class="btnna"   onclick="window.location.href='flag.html'">
+         Flags
+</button></p>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="products">
+
+        <p>Showing 1–6 product </p>
+        <p>MUG/CUP PRINTING</p>
+
+
+        <div class="product-grid">
+
+            <div class="card">
+                <img src="image/mug1.jpg">
+                <h4>Gold Ceramic Mug</h4>
+                <p class="price">LKR 850</p>
+                <button class="btn"   onclick="window.location.href='order cup.html'">
+
+                ADD TO CART</button>
+            </div>
+
+            <div class="card">
+                <img src="image/mug2.jpg">
+                <h4>Inner Blue Mug</h4>
+                <p class="price">LKR 850</p>
+                <button class="btn"   onclick="window.location.href='order cup.html'">
+
+                ADD TO CART</button>
+            </div>
+
+            <div class="card">
+                <img src="image/mug3.jpg">
+                <h4>Inner Green Mug</h4>
+                <p class="price">LKR 850</p>
+                <button class="btn"   onclick="window.location.href='order cup.html'">
+
+                ADD TO CART</button>
+            </div>
+
+            <div class="card">
+                <img src="image/mug4.jpeg">
+                <h4>Black Mug</h4>
+                <p class="price">LKR 850</p>
+                 <button class="btn"   onclick="window.location.href='order cup.html'">
+
+                ADD TO CART</button>
+            </div>
+
+            <div class="card">
+                <img src="image/mug5.jpeg">
+                <h4>Christmas Mug</h4>
+                <p class="price">LKR 850</p>
+                 <button class="btn"   onclick="window.location.href='order cup.html'">
+
+                ADD TO CART</button>
+            </div>
+
+            <div class="card">
+                <img src="image/mug6.jpeg">
+                <h4>Custom Mug</h4>
+                <p class="price">LKR 850</p>
+                 <button class="btn"   onclick="window.location.href='order cup.html'">
+
+                ADD TO CART</button>
+            </div>
+             <div class="card">
+                <img src="image/mug7.jpeg">
+                 <h4>Custom Mug</h4>
+                <p class="price">LKR 850</p>
+                 <button class="btn"   onclick="window.location.href='order cup.html'">
+
+                ADD TO CART</button>
+            </div>
+             <div class="card">
+                <img src="image/mug8.jpeg">
+                 <h4>Custom Mug</h4>
+                <p class="price">LKR 850</p>
+                 <button class="btn"   onclick="window.location.href='order cup.html'">
+
+                ADD TO CART</button>
+            </div>
+             <div class="card">
+                <img src="image/mug9.jpeg">
+                 <h4>Custom Mug</h4>
+                <p class="price">LKR 850</p>
+                 <button class="btn"   onclick="window.location.href='order cup.html'">
+
+                ADD TO CART</button>
+            </div>
+             <div class="card">
+                <img src="image/mug10.jpeg">
+                 <h4>Custom Mug</h4>
+                <p class="price">LKR 850</p>
+                 <button class="btn"   onclick="window.location.href='order cup.html'">
+
+                ADD TO CART</button>
+            </div>
+             <div class="card">
+                <img src="image/mug11.jpeg">
+                 <h4>Custom Mug</h4>
+                <p class="price">LKR 850</p>
+                 <button class="btn"   onclick="window.location.href='order cup.html'">
+
+                ADD TO CART</button>
+            </div>
+             <div class="card">
+                <img src="image/mug12.jpeg">
+                 <h4>Custom Mug</h4>
+                <p class="price">LKR 850</p>
+                 <button class="btn"   onclick="window.location.href='order cup.html'">
+
+                ADD TO CART</button>
+            </div>
+             <div class="card">
+                <img src="image/mug13.jpeg">
+                 <h4>Custom Mug</h4>
+                <p class="price">LKR 850</p>
+                 <button class="btn"   onclick="window.location.href='order cup.html'">
+
+                ADD TO CART</button>
+            </div>
+             <div class="card">
+                <img src="image/mug14.jpeg">
+                 <h4>Custom Mug</h4>
+                <p class="price">LKR 850</p>
+                 <button class="btn"   onclick="window.location.href='order cup.html'">
+
+                ADD TO CART</button>
+            </div>
+
+            <div class="card">
+                <img src="image/mug15.jpeg">
+                 <h4>Custom Mug</h4>
+                <p class="price">LKR 850</p>
+                 <button class="btn"   onclick="window.location.href='order cup.html'">
+
+                ADD TO CART</button>
+            </div>
+             
+
+            
+
+           
+
+            
+
+            
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- FOOTER -->
+<div class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-box">
+            <h3>Stay In Touch</h3>
+            <p> No. 57 </p>
+            <p>Station Road,</p>
+            <p> Gampola 20500.</p>
+            <p>Kandy,  Sri Lanka</p>
+            <p>pingafation@gmail.com</p>
+            <p>(+94) 70 52 93 599</p>
+        </div>
+
+        <div class="footer-box">
+            <h3>Menu</h3>
+            <p><a href="index.html">Home</a></p>
+            <p><a href="shop.html">All Products</a></p>
+            <p>Business & Marketing Material</p>
+            <p>Visiting Cards</p>
+        </div>
+
+        <div class="footer-box">
+            <h3>Company</h3>
+            <p><a href="about.html">About Us</a></p>
+            <p>Franchise Opportunities</p>
+            <p><a href="contact.html">Contact Us</a></p>
+        </div>
+
+        <div class="footer-box">
+            <h3>Help</h3>
+            <p>How To Place An Order</p>
+            <p>How To Redeem Your Voucher</p>
+            <p>Send Artwork</p>
+        </div>
+
+    </div>
+
+    <div class="copyright">
+        © 2026 Pinga Fashion | All Rights Reserved
+    </div>
+
+</div>
+
+<script>
+function openMenu() {
+    document.getElementById("menu").style.left = "0";
+}
+
+function closeMenu() {
+    document.getElementById("menu").style.left = "-260px";
+}
+</script>
+
+
+</body>
+</html>
